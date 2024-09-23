@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 
 const userSchema= new mongoose.Schema({
      username:{
-        type:string,
+        type:String,
         require:true,
         unique:true,
         lowercase:true,
@@ -12,38 +12,38 @@ const userSchema= new mongoose.Schema({
         index:true,
      },
      email:{
-        type:string,
+        type:String,
         require:true,
         unique:true,
         lowercase:true,
         trim:true,
      },
      fullName:{
-        type:string,
+        type:String,
         require:true,
         trim:true,
         index:true,
      },
      Avtar:{
-        type:string,
+        type:String,
         require:true,
      },
    coverImage:{
-    type:string,
+    type:String,
    },
-   watchHistory:[
+   watchHistory: [
     {
-        type:Schema.Types.ObjectId,
-        ref:"Video",
+        type: mongoose.Schema.Types.ObjectId, // Reference should be 'mongoose.Schema.Types'
+        ref: "Video",
     }
-   ],
+],
 
    password:{
-    type:"string",
+    type:"String",
     require:[true, "Password is required"],
    },
    refreshToken:{
-    type:string,
+    type:String,
    }
 
 

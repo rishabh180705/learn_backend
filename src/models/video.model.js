@@ -5,19 +5,19 @@ import mongooseAggregatePaginate from "mongoose-aggregate-paginate-v2";
 
 const videoSchema= new mongoose.Schema({
      VideoFile:{
-        type:string,
+        type:String,
         require:true,
      },
      thumbnail:{
-        type:string,
+        type:String,
         require:true,
      },
      title:{
-        type:string,
+        type:String,
         require:true,
      },
      description:{
-        type:string,
+        type:String,
         require:true,
      },
    duration:{
@@ -36,11 +36,11 @@ const videoSchema= new mongoose.Schema({
    ],
 
    password:{
-    type:"string",
+    type:"String",
     require:[true, "Password is required"],
    },
    refreshToken:{
-    type:string,
+    type:String,
    }
 
 

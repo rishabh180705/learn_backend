@@ -9,7 +9,13 @@ app.use(cors({
 app.use(express.json({limit:"16kb"}));
 app.use(express.urlencoded({extended:true,limit:"16kb"}));
 app.use(express.static("public"));
-app.use(express.cookieParser());
+app.use(cookieParser());
 
 
+// routes
+import userRoute from "./routes/user.route.js";
+
+// routes declearation
+
+app.use('/api/v1/user',userRoute);
 export {app};
